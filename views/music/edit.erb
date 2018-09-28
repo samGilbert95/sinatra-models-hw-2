@@ -1,0 +1,32 @@
+<h1>EDIT PAGE</h1>
+<form action="/music/<%= @music.id %>" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">First Name</label>
+    <input type="text" class="form-control" placeholder="Track" name="first_name"
+    value = "<%= @music.first_name %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Last Name</label>
+    <input type="text" class="form-control" placeholder="Artist" name="last_name"
+    value = "<%= @music.last_name %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Email</label>
+    <input type="text" class="form-control" placeholder="Name" name="email"
+    value = "<%= @music.email %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Gender</label>
+    <input type="text" class="form-control" placeholder="Release Year" name="gender"
+    value = "<%= @music.gender %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Ip</label>
+    <input type="text" class="form-control" placeholder="Release Year" name="ip_address"
+    value = "<%= @music.ip_address %>">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  <% if (@music.id != '') %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>

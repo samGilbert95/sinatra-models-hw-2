@@ -1,0 +1,9 @@
+<h1>HOME</h1>
+<% @music.each do |music| %>
+<h2> <a href="/music/<%= music.id %>"> <%= music.first_name %></a></h3>
+<h3><%= music.last_name %></h3>
+<h4><%= music.email %></h3>
+<h5><%= music.gender %></h3>
+<h5><%= music.ip_address %></h3>
+<% end %>
+<a href="music/new">New Music</a>

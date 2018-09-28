@@ -1,0 +1,12 @@
+<h1>DISPLAY PAGE</h1>
+<h2><%= @music.first_name %></h3>
+<h3><%= @music.last_name %></h3>
+<h4><%= @music.email %></h3>
+<h5><%= @music.gender %></h3>
+<h5><%= @music.ip_address %></h3>
+<a href="/music"> Main Page</a>
+<a href="/music/<%= @music.id %>/edit"> Edit</a>
+<form class="" action="/music/<%= @music.id %>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input class="btn btn-danger" type="submit" value="Delete">
+</form>
